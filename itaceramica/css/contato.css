@@ -30,7 +30,7 @@ textarea{
     font-family: 'DM Sans', sans-serif;
 }
 @media screen and (max-width: 600px){ 
-    section{
-        margin-top:167px
+  .formulario{
+        margin-top: 250px;
     }
 }
