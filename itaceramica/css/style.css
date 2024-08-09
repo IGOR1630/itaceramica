@@ -1,144 +1,477 @@
-body{
+/*  Globais*/
+body {
     background-color: #f1f1f1;
     margin: 0;
     padding: 0;
 }
-.navbar{
-    position:absolute;
+
+h4 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #404040;
+    font-family: 'Dm Sans', sans-serif;
+
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar flexbox e media querie*/
+.navbar {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     background-color: #F04622;
 
-  }
-  .navbar .navbar_content{
+}
+
+.navbar .navbar_content {
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
-  }
-  .navbar .navbar_content .search-box{
-   background:white;
-   height: 35px;
-   padding: 10px;
-   border-radius: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-    flex-grow: 1; /* Expande para ocupar espaço disponível */
-    max-width: 450px; /* Limita a largura máxima */
-    margin: 0 10px; /* Espaçamento entre a search-box e outros elementos */
-  }
-  .navbar .navbar_content .search-box .search-text{
+    flex-wrap: wrap;
+    /* Permite quebrar linhas em telas menores */
+}
+
+.navbar .navbar_content .search-box {
+    background: white;
+    height: 35px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    /* Expande para ocupar espaço disponível */
+    max-width: 450px;
+    /* Limita a largura máxima */
+    margin: 0 10px;
+    /* Espaçamento entre a search-box e outros elementos */
+}
+
+.navbar .navbar_content .search-box .search-text {
     width: 450px;
     background: none;
     border: 0;
     outline: 0;
     font-size: 16px;
-  }
-  .navbar .navbar_content .navbar_links li{
-   display: inline-block;
-   font-size: larger;
-   font-family: 'DM Sans', sans-serif;
-  }
+}
 
-  .navbar .navbar_content .navbar_links li:not(:last-of-type){
+.navbar .navbar_content .navbar_links li {
+    display: inline-block;
+    font-size: larger;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.navbar .navbar_content .navbar_links li:not(:last-of-type) {
     margin-right: 2rem;
-   }
-   .navbar .navbar_content .navbar_links a{
+}
+
+.navbar .navbar_content .navbar_links a {
     display: inline-block;
     color: white;
     flex-grow: 1;
-   }
-   .navbar .navbar_content .navbar_links a:hover{
+}
+
+.navbar .navbar_content .navbar_links a:hover {
     color: #a6b1e1;
-   }
-.Principais{
+}
+
+/* Section principais e mais vendidos usando flexbox*/
+.Principais {
     margin-top: 10rem;
     padding: 1rem;
-    background:white;
+    background: white;
     border-radius: 40px;
     padding: 20px;
     gap: 20px;
 }
 
-#mais_vendidos {
+.mais_vendidos {
     text-align: center;
     display: flex;
     gap: 60px;
-    list-style-type: none; 
-    padding: 0; 
-    margin: 10px 0 5px; 
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 5px;
 }
-#mais_vendidos li {
-    flex: 1; 
-    max-width: 300px; 
-    padding: 10px; 
+
+.mais_vendidos li {
+    flex: 1;
+    max-width: 300px;
+    padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(100, 9, 9, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 10%;
 }
-#mais_vendidos li:hover {
-    transform: scale(1.05); 
+
+.mais_vendidos li:hover {
+    transform: scale(1.05);
 }
 
 
-#mais_vendidos img {
-    max-width: 100%; 
-    height: auto; 
+.mais_vendidos img {
+    max-width: 100%;
+    height: auto;
 }
-#mais_vendidos p{
+
+.mais_vendidos p {
     margin: 0;
     height: 30px;
     font-size: 18px;
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
 }
-h4{ 
-    margin: 10px 0 5px;
-    font-size: 20px; 
-    color: #404040;
-    font-family: 'Dm Sans', sans-serif;
-    
+
+/* Section produtos do index*/
+.produtos {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
 }
-h3{
-    font-size:24px;
-    font-family:'DM Sans',sans-serif;
-    margin-bottom: 20px;
+
+/* Ul de todos os produtos do index estilizadas com flexbox  */
+.todos_produtos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 05px;
+    list-style-type: none;
+    padding: 0;
 }
-a{
-    text-decoration: none;
+
+.todos_produtos li {
+    flex: 1 calc(33.33% - 40px);
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    padding: 10px;
+    text-align: center;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(100, 9, 9, 0.1);
+    border-radius: 5%;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-@media screen and (max-width: 687px){
+
+.todos_produtos li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(100, 9, 9, 0.2);
+}
+
+.todos_produtos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todos_produtos h4 {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todos_produtos p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+/* Página com detalhes dos produtos*/
+.descricao_grande_produto {
+    margin-top: 10rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Div para estilizar a minha section utilizando flexbox*/
+.descricao_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 10px auto;
+
+
+}
+
+/* Div para estilizar o meu produto info utilizando flexbox*/
+.produto_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.produto_info h3 {
+    margin-left: 20px;
+}
+
+.produto_info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.produto_info img:hover {
+    transform: scale(1.09);
+    box-shadow: 0 6px 12px rgba(100, 9, 9, 0.2);
+}
+
+/* Div para estilizar o meu produto detalhes utilizando flexbox*/
+.produto_detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.produto_detalhes p {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.produto_detalhes h5 {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #555;
+}
+
+.produto_detalhes input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.produto_detalhes button {
+    padding: 10px 20px;
+    background-color: #f04622;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produto_detalhes button:hover {
+    background-color: #d03c1a;
+}
+
+/* Section da descrição */
+.sobre {
+    margin-top: 5rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background: white;
+    border-radius: 10;
+}
+
+.sobre h3 {
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+}
+
+/* Section das informações adicionais */
+.adicionais {
+    margin-top: 1rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background: white;
+    border-radius: 10;
+}
+
+.adicionais h3 {
+    text-align: center;
+}
+
+.adicionais p {
+    font-size: 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+/* Estilização da section e ul dos outros produtos disponiveis da pagina de detalhes*/
+.outros_produtos {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.produtos_disponiveis {
+    display: flex;
+    margin: 10px;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+.produtos_disponiveis li {
+    padding: 1rem;
+    text-align: center;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(100, 9, 9, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produtos_disponiveis li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(100, 9, 9, 0.2);
+}
+
+.produtos_disponiveis img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produtos_disponiveis h4 {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.produtos_disponiveis p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+/* estilização do footer*/
+footer {
+    background-color: #F04622;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+footer h3 {
+    color: white;
+    margin: 10px 0;
+}
+
+footer span {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: white;
+
+}
+
+footer ul {
+    padding: 10;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul a {
+    display: inline-block;
+    padding: 20px;
+}
+
+footer .footer_copyright {
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* media querie utilizados */
+
+@media screen and (max-width: 997px) {
+    .descricao_grande_produto {
+        margin-top: 250px;
+    }
+
+    .produtos_disponiveis {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+}
+
+
+@media screen and (max-width: 687px) {
 
     .navbar_content {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .search-box {
-        order: 2; 
-        width: 100%; 
-        margin-bottom: 10px; 
+        order: 2;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .navbar_links {
-        display:flex; 
+        display: flex;
         text-align: left;
-        order: 3; 
-        flex-direction: column; 
+        order: 3;
+        flex-direction: column;
         width: 100%;
     }
-.Principais{
-    margin-top: 250px;
-    align-items: flex-start; 
-  
-}
-#mais_vendidos{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
- }
+
+    .Principais {
+        margin-top: 250px;
+        align-items: flex-start;
+
+    }
+
+    .mais_vendidos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
