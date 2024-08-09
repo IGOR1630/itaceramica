@@ -1,0 +1,36 @@
+.formulario{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+.formulario input{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.formulario .buttom{
+    background-color: #F04622;
+    color: white;
+    cursor: pointer;
+}
+.formulario .buttom:hover{
+    background-color: #d03c1a;
+}
+
+textarea{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'DM Sans', sans-serif;
+}
+@media screen and (max-width: 600px){ 
+    section{
+        margin-top:167px
+    }
+}

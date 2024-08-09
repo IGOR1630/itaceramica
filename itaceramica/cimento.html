@@ -5,35 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>itacerâmica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detalhes.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 
 <body>
     <header class="descricao">
         <nav class="navbar">
+            <div class="navbar_content">
+            <a href="index.html">
             <img src="img/logo.webp" alt="logo">
+        </a> 
+        <div class="search-box">
+            <input type="text" class="search-text" placeholder="Pesquisar...">
+            <a class="search-btn">
+                <img class="lupa" src="img/search.webp" alt="search">
+            </a>
+        </div>
             <ul class="navbar_links">
                 <li><a href="index.html">Mais Vendidos</a></li>
                 <li><a href="index.html">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato.html" target="_blank">Contato</a></li>
             </ul>
-            <hr>
+             </div>
+
         </nav>
     </header>
     <section class="descricao_grande_produto">
-        <h3>Cimento 50kg</h3>
-        <img src="img/cimento.webp" alt="cimento">
-        <p>R$ 00,00. <span>no Pix ou em 10x</span></p>
-        <h5>Informe a quantidade:</h5>
-        <input type="number" min="1">
-        <button type="submit">Comprar</button>
+        <div class="descricao_content">
+            <div class="produto_info">
+                <h3>Cimento 50kg</h3>
+                <img src="img/cimento.webp" alt="Cimento">
+            </div>
+            <div class="produto_detalhes">
+                <p>R$ 00,00. <span>no Pix <br>ou em 10x</span></p>
+                <h5>Informe a quantidade:</h5>
+                <input type="number" min="1">
+                <button type="submit">Comprar</button>
+            </div>
+        </div>
     </section>
-
-    <hr>
+    
     <section class="sobre">
         <h3>Descrição do produto</h3>
         <p>O cimento é um dos principais componentes de qualquer obra, utilizado na produção de concreto, argamassa e outros materiais de construção.<br> Com propriedades adesivas e de endurecimento, é fundamental para a construção de estruturas robustas e duradouras, como fundações, pilares e lajes.</p>
     </section>
-    <hr>
+    
     <section class="adicionais">
         <H3>Informações adicionais</H3>
         <p>Peso: 50 kg (saco)<br>
@@ -42,10 +60,10 @@
             Uso: Produção de concreto e argamassa<br>
             Cor: Cinza</p>
     </section>
-    <hr>
+    
     <section class="outros_produtos">
         <h3> Outros produtos disponíveis:</h3>
-        <ul class="Produtos">
+        <ul class="produtos_disponiveis">
             <a href="porcelanato.html">
                 <li id="porcelanato">
                     <img src="img/piso.webp" alt="porcelanato">
@@ -129,6 +147,21 @@
 
 
     </section>
+    <footer class="footer">
+        <div class="footer_content">
+        <h3> Formas de Pagamento </h3>
+        <img src="img/pix.webp" alt="pix">
+        <span>igor.menino23@gmail.com</span>
+        <span>79 9-91070345</span>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/igor-nepomuceno-a537ba17b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="img/linkedin.webp" alt="linkedin"></a></li>
+            <li><a href="https://github.com/IGOR1630"><img src="img/github.webp" alt="github"></a></li>
+        </ul>
+        <p class="footer_copyright">
+            © 2024 Igor Nepomuceno. Todos os direitos reservados.
+        </p>
+    </div>
+    </footer>
 </body>
 
 </html>
